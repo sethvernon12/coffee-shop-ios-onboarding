@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Shop iOS App Onboarding Guide</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --accent: #3b82f6;
+      --success: #10b981;
+      --border: #334155;
+    }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; }
+    h1 { color: #60a5fa; text-align: center; }
+    h2 { border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-top: 2rem; }
+    .card { background: var(--card); border-radius: 12px; padding: 20px; margin: 16px 0; border: 1px solid var(--border); }
+    .step { margin: 12px 0; }
+    .checkbox { margin-right: 8px; accent-color: var(--success); }
+    details { background: #0f172a; border-radius: 8px; padding: 12px; margin: 8px 0; }
+    summary { cursor: pointer; font-weight: 600; color: #93c5fd; }
+    .progress { height: 8px; background: #334155; border-radius: 4px; margin: 16px 0; }
+    .progress-bar { height: 100%; background: var(--success); border-radius: 4px; width: 0%; transition: width 0.3s; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { padding: 10px; text-align: left; border-bottom: 1px solid var(--border); }
+    .highlight { background: #1e3a8a; padding: 12px; border-radius: 8px; }
+    @media (max-width: 600px) { body { padding: 12px; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Coffee Shop iOS App Onboarding Guide</h1>
+    <p style="text-align:center; opacity:0.8;">Individual apps under your own Apple Developer account — fully compliant with Apple’s rules (Guideline 4.2.6).</p>
+
+    <div class="card highlight">
+      <strong>Why this process?</strong> Apple requires the content owner (your coffee shop’s legal entity) to submit the app from its own Developer account. Template-style apps submitted under an agency account are rejected under Guideline 4.2.6. This protects you and keeps the listing permanently in your name.
+    </div>
+
+    <h2>What You Own vs. What We Handle</h2>
+    <table>
+      <tr><th>You Own</th><th>We Handle (as invited team member)</th></tr>
+      <tr><td>Apple Developer Organization account</td><td>Building and updating the app</td></tr>
+      <tr><td>App Store listing, name, and ratings</td><td>Uploading builds, answering review questions</td></tr>
+      <tr><td>Renewal decisions and $99/year fee</td><td>Day-to-day App Store Connect management</td></tr>
+      <tr><td>Customer relationships and data</td><td>Technical support and feature requests (per agreement)</td></tr>
+    </table>
+
+    <h2>Prerequisites Checklist</h2>
+    <div class="progress"><div class="progress-bar" id="progress"></div></div>
+    <div id="checklist">
+      <div class="step"><input type="checkbox" class="checkbox" id="c1"> <label for="c1">Legal entity exists (LLC or Corporation — not a sole proprietorship or DBA)</label></div>
+      <div class="step"><input type="checkbox" class="checkbox" id="c2"> <label for="c2">Person with legal binding authority ready to enroll (owner/founder preferred)</label></div>
+      <div class="step"><input type="checkbox" class="checkbox" id="c3"> <label for="c3">Work email on your company domain (not Gmail/Yahoo)</label></div>
+      <div class="step"><input type="checkbox" class="checkbox" id="c4"> <label for="c4">Public website on your own domain that is functional</label></div>
+      <div class="step"><input type="checkbox" class="checkbox" id="c5"> <label for="c5">Apple ID with two-factor authentication enabled</label></div>
+    </div>
+
+    <h2>Step-by-Step Process</h2>
+    <details open>
+      <summary>1. Obtain a free D-U-N-S Number (~5 business days)</summary>
+      <p>Apple uses this nine-digit number from Dun & Bradstreet to verify your legal entity. Check if you already have one, or request a free one via Apple’s tool. Details must match exactly.</p>
+      <p><a href="https://developer.apple.com/help/account/membership/D-U-N-S/" target="_blank" style="color:#60a5fa;">Apple D-U-N-S Lookup & Request Tool</a></p>
+      <p>After issuance, allow up to 2 more days for Apple to see it.</p>
+    </details>
+    <details>
+      <summary>2. Enroll in the Apple Developer Program as an Organization ($99/year)</summary>
+      <p>Go to <a href="https://developer.apple.com/programs/enroll/" target="_blank" style="color:#60a5fa;">developer.apple.com/programs/enroll</a>. Select Organization. Use your legal entity name (this becomes the seller name on the App Store). Apple verifies identity and authority — total time often 2–4 weeks. Pay with a card belonging to the business so you control renewals.</p>
+    </details>
+    <details>
+      <summary>3. Invite your developer as App Manager (recommended)</summary>
+      <p>Once the account is active: App Store Connect → Users and Access → Invite. Use the App Manager role so we can manage the app without full financial access. Invitations expire in 3 days. You remain the Account Holder forever.</p>
+    </details>
+    <details>
+      <summary>4. We build, test, and submit under your account</summary>
+      <p>We handle provisioning, TestFlight, App Store submission, and responses to review. A real iPhone is needed for device testing and final submission. You own the listing from day one.</p>
+    </details>
+
+    <h2>Timeline & Costs</h2>
+    <div class="card">
+      <p><strong>Typical timeline:</strong> D-U-N-S (1 week) + Apple verification (1–3 weeks) = often ready in 2–4 weeks.</p>
+      <p><strong>Cost:</strong> $99 USD per year for the Apple Developer Program (paid by you or passed through). This is the only Apple fee. Development and ongoing service are separate.</p>
+    </div>
+
+    <h2>If the Relationship Ends</h2>
+    <p>You can revoke our access at any time in Users and Access. The App Store listing, ratings, and account stay with you. There is no hostage situation.</p>
+
+    <h2>Making Your App Unique</h2>
+    <p>To reduce any risk under Guideline 4.3 (spam/lookalikes), we customize branding, ordering flows, loyalty features, and local content specific to your shop. Each app is submitted under its own Bundle ID from your account.</p>
+
+    <div class="card" style="text-align:center;">
+      <p>By God’s grace, this process keeps everything clean, compliant, and permanently in your name.</p>
+      <p>Questions? Contact your developer to begin.</p>
+    </div>
+  </div>
+
+  <script>
+    const checkboxes = document.querySelectorAll('.checkbox');
+    const progressBar = document.getElementById('progress');
+    function updateProgress() {
+      const checked = document.querySelectorAll('.checkbox:checked').length;
+      const pct = (checked / checkboxes.length) * 100;
+      progressBar.style.width = pct + '%';
+      localStorage.setItem('onboardingProgress', JSON.stringify([...checkboxes].map(c => c.checked)));
+    }
+    checkboxes.forEach((cb, i) => {
+      const saved = JSON.parse(localStorage.getItem('onboardingProgress') || '[]');
+      if (saved[i]) cb.checked = true;
+      cb.addEventListener('change', updateProgress);
+    });
+    updateProgress();
+  </script>
+</body>
+</html>
